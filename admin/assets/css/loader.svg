@@ -1,0 +1,6 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+<g id="spinner">
+  <animateTransform attributeName="transform" type="rotate" values="0,25,25; 359,25,25;" dur="0.8s" repeatCount="indefinite"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="1.8977" stroke-miterlimit="10" d="M40.088,6.696  c5.272,4.35,8.633,10.935,8.633,18.304c0,13.101-10.62,23.721-23.721,23.721S1.279,38.101,1.279,25S11.899,1.279,25,1.279"/>
+</g>
+</svg>

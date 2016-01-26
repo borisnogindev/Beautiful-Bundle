@@ -1,0 +1,25 @@
+[09-Nov-2015 10:29:06 UTC] PHP Fatal error:  Class 'PDO' not found in /home/shopiapps/public_html/cartupsell/admin/ssp.class.php on line 387
+[12-Nov-2015 02:57:07 UTC] PHP Fatal error:  Uncaught exception 'ShopifyApiException' with message 'Unauthorized' in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php:67
+Stack trace:
+#0 /home/shopiapps/public_html/cartupsellforEPA/admin/ajax.php(388): ShopifyClient->call('GET', '/admin/products...')
+#1 {main}
+  thrown in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php on line 67
+[12-Nov-2015 02:57:09 UTC] PHP Fatal error:  Uncaught exception 'ShopifyApiException' with message 'Unauthorized' in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php:67
+Stack trace:
+#0 /home/shopiapps/public_html/cartupsellforEPA/admin/ajax.php(388): ShopifyClient->call('GET', '/admin/products...')
+#1 {main}
+  thrown in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php on line 67
+[13-Nov-2015 04:35:37 UTC] PHP Fatal error:  Uncaught exception 'ShopifyApiException' with message 'Bad Request' in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php:67
+Stack trace:
+#0 /home/shopiapps/public_html/cartupsellforEPA/admin/ajax.php(330): ShopifyClient->call('GET', '/admin/products...')
+#1 {main}
+  thrown in /home/shopiapps/public_html/cartupsellforEPA/shopifyclient.php on line 67
+[19-Nov-2015 17:27:49 UTC] PHP Parse error:  syntax error, unexpected '-' in /home/shopiapps/public_html/cartupsellforEPA/admin/home.php on line 455
+[20-Nov-2015 19:17:01 UTC] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT), expecting ',' or ';' in /home/shopiapps/public_html/beautifull_bundle_images/admin/edit_image.php on line 25
+[24-Nov-2015 06:22:44 UTC] PHP Fatal error:  Uncaught exception 'ShopifyApiException' with message 'Bad Request' in /home/shopiapps/public_html/beautifull_bundle_images/shopifyclient.php:67
+Stack trace:
+#0 /home/shopiapps/public_html/beautifull_bundle_images/admin/ajax.php(148): ShopifyClient->call('GET', '/admin/products...')
+#1 {main}
+  thrown in /home/shopiapps/public_html/beautifull_bundle_images/shopifyclient.php on line 67
+[16-Dec-2015 18:38:19 UTC] PHP Fatal error:  Call to undefined function getCollection() in /home/shopiapps/public_html/beautifull_bundle_images/admin/bundle_images.php on line 7
+[16-Dec-2015 19:05:47 UTC] PHP Fatal error:  Call to undefined function getCollection() in /home/shopiapps/public_html/beautifull_bundle_images/admin/bundle_images.php on line 7

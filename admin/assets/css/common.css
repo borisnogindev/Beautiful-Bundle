@@ -1,0 +1,54 @@
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.code{text-align: center;background-color: #ccc;font-size: 15px;height: 45px;}
+
+.alert {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    display: none;
+    z-index: 5555;
+}
+.overlay .loading {
+    height: 90px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -28px 0 0 -25px;
+}
+.cell-container{margin-bottom: 15px;}
+.notes{
+    background: #ebeef0 none repeat scroll 0 0;
+    border: 1px solid #ebeef0;
+    padding: 5px !important;
+}
+.text_right{text-align:right;}
+.err_star{color:red;}
+.hide{display:none; }
+.cell-column input{padding: 4px;}

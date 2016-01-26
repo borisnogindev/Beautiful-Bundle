@@ -1,0 +1,102 @@
+<div id="bundle_image_map">
+</div>
+<style>
+#cu_loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("{{ 'cu_loader.svg' | asset_url }}") 50% 50% no-repeat rgba(0,0,0,.701961);
+    -moz-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    -webkit-transition: all 250ms linear;
+    transition: all 250ms linear;
+    background-size: 95px; 
+  }
+</style>
+<div id="cu_loader" style="display:none"></div> 
+<script>  
+  $("#cu_loader").show();
+  if (typeof jQuery === 'undefined') {
+    document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"><\/script>');
+  }  
+  jQuery.browser = {};
+  (function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+      jQuery.browser.msie = true;
+      jQuery.browser.version = RegExp.$1;
+    }
+  })();
+</script>
+<script type="text/javascript" src="//shopiapps.io/beautifull_bundle_images/front_assets/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="//shopiapps.io/beautifull_bundle_images/front_assets/jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript" src="//shopiapps.io/beautifull_bundle_images/front_assets/jquery.imagemapster.js"></script>
+<link rel="stylesheet" type="text/css" href="//shopiapps.io/beautifull_bundle_images/front_assets/jquery.fancybox-1.3.4.css" media="screen" />
+<script>  
+  var shop_p_link = "{{ shop.permanent_domain }}";
+  $.ajax({
+	type: 'POST',
+	url: "//shopiapps.io/beautifull_bundle_images/get_image.php",
+	data: { "shop": shop_p_link, "bn_id": "{{bundle_image}}" },
+	success: function(data_new){
+	  $("#cu_loader").hide();
+           
+	  $("#bundle_image_map").html(data_new);
+           
+           setTimeout(function(){
+      $('#img_bundle').load(function(){
+      $('#img_bundle').mapster(
+      {
+          fillOpacity: 0,
+          fillColor: "000000",
+          stroke: true,
+          strokeColor: "ffffff",
+          strokeOpacity: 1,
+          strokeWidth: 2,
+          singleSelect: true,
+           staticState: true,
+          onClick: function (e) {
+		   $("#cu_loader").show();
+           $.getJSON('/products/'+$(this).data("product-handle")+'.js', function(product) {
+           
+           	var cu_html = "<div class='cu_banner_multi_opt_popup' style='height:auto; width: 500px;max-width:97%;'><a target='_blank' href='"+product.url+"'><h3>"+product.title+"</h3></a><p>"+stripScripts(product.description)+"</p><h2>$"+(product.price/100)+"<h2></div>";
+                       $.fancybox({
+              'content' : cu_html
+            });
+			$("#cu_loader").hide();
+          });
+        }
+          });
+		  });
+  } ,1000);
+	  
+    
+
+
+	},
+	error: function(jqXHR, textStatus, errorThrown){
+	  $("#cu_loader").hide();
+	}
+  });
+  
+
+  function stripScripts(s) {
+    var div = document.createElement('div');
+    div.innerHTML = s;
+    var scripts = div.getElementsByTagName('script');
+    var i = scripts.length;
+    while (i--) {
+      scripts[i].parentNode.removeChild(scripts[i]);
+    }
+    return div.innerHTML;
+  }
+  
+ 
+  $(document).on('click', '.cu-fancy-close', function () { 
+    $.fancybox.close();
+  });
+</script>

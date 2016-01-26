@@ -1,0 +1,90 @@
+[
+    {
+        "name": "sandeepshetty/wcurl",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sandeepshetty/wcurl.git",
+            "reference": "69e532773ca9306418101ca6c8edddd6c70d5427"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sandeepshetty/wcurl/zipball/69e532773ca9306418101ca6c8edddd6c70d5427",
+            "reference": "69e532773ca9306418101ca6c8edddd6c70d5427",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "time": "2013-04-07 01:00:07",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "http://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sandeep Shetty",
+                "email": "sandeep.shetty@gmail.com",
+                "homepage": "http://sandeep.shetty.in",
+                "role": "Developer"
+            }
+        ],
+        "description": "A convenience wrapper around PHP's cURL library",
+        "homepage": "https://github.com/sandeepshetty/wcurl",
+        "keywords": [
+            "api",
+            "curl",
+            "http"
+        ]
+    },
+    {
+        "name": "sandeepshetty/shopify_api",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sandeepshetty/shopify_api.git",
+            "reference": "277472f4612b650155269954e49a15a4fdf2e341"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sandeepshetty/shopify_api/zipball/277472f4612b650155269954e49a15a4fdf2e341",
+            "reference": "277472f4612b650155269954e49a15a4fdf2e341",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "sandeepshetty/wcurl": "dev-master"
+        },
+        "time": "2013-04-07 01:09:06",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "../wcurl/wcurl.php",
+                "client.php"
+            ]
+        },
+        "notification-url": "http://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sandeep Shetty",
+                "email": "sandeep.shetty@gmail.com",
+                "homepage": "http://sandeep.shetty.in",
+                "role": "Developer"
+            }
+        ],
+        "description": "Simple Shopify API client in PHP",
+        "homepage": "https://github.com/sandeepshetty/shopify_api",
+        "keywords": [
+            "api",
+            "shopify"
+        ]
+    }
+]
